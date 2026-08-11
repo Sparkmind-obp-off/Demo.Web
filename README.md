@@ -11,7 +11,8 @@
 ## URLs
 
 - **Production**: https://noir-barber.pages.dev
-- **GitHub**: https://github.com/Sparkmind-obp-off/Demo.web.barber
+- **Deployment terbaru**: https://6dc5802b.noir-barber.pages.dev
+- **GitHub**: https://github.com/Sparkmind-obp-off/Demo.Web
 - **API health**: https://noir-barber.pages.dev/api/health
 - **API services**: https://noir-barber.pages.dev/api/services
 - **Sitemap**: https://noir-barber.pages.dev/sitemap.xml
@@ -131,7 +132,16 @@ curl http://localhost:3000/api/health
 - **Platform**: Cloudflare Pages (BYOK — akun Cloudflare milik user)
 - **Project name**: `noir-barber`
 - **Production branch**: `main`
-- **Status**: ✅ Active
+- **Status**: ✅ Active (verified — semua route balik `200`)
 - **Tech Stack**: Hono 4 + TypeScript + Vite + Vanilla CSS/JS
 - **Storage**: tidak ada (situs stateless)
+- **Bundle**: `dist/_worker.js` ≈ 54 kB
 - **Last Updated**: 2026-08-11
+
+### Cara Redeploy
+
+```bash
+cd /home/user/webapp
+npm run build
+npx wrangler pages deploy dist --project-name noir-barber --branch main
+```
